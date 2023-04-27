@@ -1,5 +1,5 @@
 {
-    "name": "@rickyvaughn2/keyvalue-r2-node-red",
+    "name": "node-red-contrib-keyvalue-r2",
     "version": "1.0.0",
     "description": "Node-RED nodes for reading and writing key-value pairs in a JSON file.",
     "author": {
