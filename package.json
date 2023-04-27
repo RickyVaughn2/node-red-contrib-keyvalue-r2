@@ -21,8 +21,12 @@
       "type": "git",
       "url": "https://github.com/RickyVaughn2/node-red-contrib-keyvalue-r2.git"
     },
+    "engines": {
+      "node": ">=12.0.0"
+    },
     "dependencies": {},
     "node-red": {
+      "version": ">=2.0.0",
       "nodes": {
         "keyvalue-read": "./keyvalue-r2.js",
         "keyvalue-write": "./nkeyvalue-r2.js"
