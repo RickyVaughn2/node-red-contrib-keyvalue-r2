@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    RED.nodes.registerType('keyvalue-read', {
+      category: 'storage',
+      color: '#a6bbcf',
+      defaults: {
+        name: { value: '' },
+        filePath: { value: '' },
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: 'file.png',
+      label: function () {
+        return this.name || 'keyvalue-read';
+      },
+      paletteLabel: 'keyvalue-read',
+      oneditprepare: function () {
+        // Custom preparation code, if needed
+      },
+    });
+  </script>
+  
+  <script type="text/html" data-template-name="keyvalue-read">
+    <div class="form-row">
+      <label for="node-input-name">
+        <i class="icon-tag"></i> Name
+      </label>
+      <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+      <label for="node-input-filePath">
+        <i class="icon-file"></i> JSON file path
+      </label>
+      <input type="text" id="node-input-filePath" placeholder="Path to JSON file">
+    </div>
+  </script>
+  
+  <script type="text/html" data-help-name="keyvalue-read">
+    <p>
+      The <code>keyvalue-read</code> node reads a value from a JSON file based on the key provided in the input message payload.
+    </p>
+    <p>
+      The JSON file path should be provided in the node configuration.
+    </p>
+    <p>
+      The output message will contain the value read from the JSON file in the payload.
+    </p>
+  </script>
+  

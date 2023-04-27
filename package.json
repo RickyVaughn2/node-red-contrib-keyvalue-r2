@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-keyvalue-r2",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Node-RED nodes for reading and writing key-value pairs in a JSON file.",
   "author": {
     "name": "Ricky Vaughn 2",
@@ -23,8 +23,12 @@
   "dependencies": {},
   "node-red": {
     "nodes": {
-      "keyvalue-read": "./keyvalue-read-r2.js",
-      "keyvalue-write": "./keyvalue-write-r2.js"
-    }
+      "keyvalue-read": "nodes/keyvalue-read-r2.js",
+      "keyvalue-write": "nodes/keyvalue-write-r2.js"
+    },
+    "version": ">=2.0.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   }
 }

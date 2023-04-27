@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    RED.nodes.registerType('keyvalue-write', {
+      category: 'storage',
+      color: '#a6bbcf',
+      defaults: {
+        name: { value: '' },
+        filePath: { value: '' },
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: 'file.png',
+      label: function () {
+        return this.name || 'keyvalue-write';
+      },
+      paletteLabel: 'keyvalue-write',
+      oneditprepare: function () {
+        // Custom preparation code, if needed
+      },
+    });
+  </script>
+  
+  <script type="text/html" data-template-name="keyvalue-write">
+    <div class="form-row">
+      <label for="node-input-name">
+        <i class="icon-tag"></i> Name
+      </label>
+      <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+      <label for="node-input-filePath">
+        <i class="icon-file"></i> JSON file path
+      </label>
+      <input type="text" id="node-input-filePath" placeholder="Path to JSON file">
+    </div>
+  </script>
+  
+  <script type="text/html" data-help-name="keyvalue-write">
+    <p>
+      The <code>keyvalue-write</code> node writes a key-value pair to a JSON file.
+    </p>
+    <p>
+      The input message should contain the key in the topic and the value in the payload.
+    </p>
+    <p>
+      The JSON file path should be provided in the node configuration.
+    </p>
+  </script>
+  
